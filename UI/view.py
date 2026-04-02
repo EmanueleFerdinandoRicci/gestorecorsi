@@ -36,7 +36,7 @@ class View(ft.UserControl):
         self._btnPrintIscrittiCorsiPD = ft.ElevatedButton(text="Stampa Numero Iscritti",
                                                   on_click=self._controller.handlePrintIscrittiCorsiPD,
                                                           width=300)
-        row1 = ft.Row([self._ddPD,self._btnPrintCorsiPD,self._btnPrintIscrittiCorsiPD])
+        row1 = ft.Row([self._ddPD,self._btnPrintCorsiPD,self._btnPrintIscrittiCorsiPD], alignment=ft.MainAxisAlignment.CENTER)
 
         #ROW2
         self._ddCodIns = ft.Dropdown(label="Corso",
@@ -48,7 +48,7 @@ class View(ft.UserControl):
         self._btnPrintCDSCodIns = ft.ElevatedButton(text="Stampa Corsi Di Studio Afferenti",
                                                     on_click=self._controller.handlePrintCDSCodIns,
                                                     width=300)
-        row2 = ft.Row([self._ddCodIns, self._btnPrintIscrittiCodIns, self._btnPrintCDSCodIns])
+        row2 = ft.Row([self._ddCodIns, self._btnPrintIscrittiCodIns, self._btnPrintCDSCodIns],alignment=ft.MainAxisAlignment.CENTER)
 
         self._page.add(row1,row2)
 
